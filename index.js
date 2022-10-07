@@ -24,4 +24,5 @@ app.use(express.json())
 app.use('/api/user', authRoute)
 app.use('/api/posts', postRoute)
 
-app.listen(305, () => console.log('Server running port: ' + 305))
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => console.log('Server running port: ' + PORT))
